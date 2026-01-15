@@ -17,5 +17,14 @@
 
     <p>Edad: {{age}}</p>
     <p>Fecha: {{today | date:"d/m/Y"}}</p>
+
+    <p>Stack de Tecnologías</p>
+    <ul>
+      {% for tool in stack %}
+      <li>{{tool}}</li>
+      {% empty %}
+      <li>No hay stack de tecnologías</li>
+      {% endfor %}
+    </ul>
   </body>
 </html>

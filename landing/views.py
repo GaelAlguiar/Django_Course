@@ -6,8 +6,10 @@ from datetime import date
 
 def home(req):
     today = date.today()
+    stack = []
     return render(req,"landing/landing.html", {
         "name": "Jorge",
         "today": today,
-        "age":21
+        "age": 21,
+        "stack": stack
     })
