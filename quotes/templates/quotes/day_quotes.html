@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Quote del día{% endblock title %}
+
+{% block content %}
+
+    {% if invalid_day %}
+        <h1>El día no existe</h1>
+    {% else %}
+        <p>{{ quote }}</p>
+    {% endif %}
+
+{% endblock content %}
