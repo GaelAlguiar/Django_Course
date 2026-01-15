@@ -6,8 +6,15 @@
     <title>Hola mundo</title>
   </head>
   <body>
-    <h1>Hola mundo desde template</h1>
-    <h2>{{name | upper}}</h2>
+    {% if name == "Gael" %}
+    <h1>Hola Gael!</h1>
+    <h2>Nombre: {{name | title}}</h2>
+    {% elif name == "Jorge"%}
+    <h1>Hola Jorge!</h1>
+    {% else %}
+    <h1>Hola invitado!</h1>
+    {% endif %}
+
     <p>Edad: {{age}}</p>
     <p>Fecha: {{today | date:"d/m/Y"}}</p>
   </body>
