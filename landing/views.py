@@ -6,10 +6,19 @@ from datetime import date
 
 def home(req):
     today = date.today()
-    stack = []
+    stack = [
+        {'id':'python', 'name': 'Python'},
+        {'id':'flutter', 'name': 'Flutter'},
+        {'id':'js', 'name': 'JS'},
+        {'id':'nodejs', 'name': 'NodeJs'},
+        {'id':'react', 'name': 'React'}
+    ]
     return render(req,"landing/landing.html", {
         "name": "Jorge",
         "today": today,
         "age": 21,
         "stack": stack
     })
+
+def stack_detail(req, tool):
+    return HttpResponse(f"Tecnología: {tool}")
